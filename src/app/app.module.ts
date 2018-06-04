@@ -1,6 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -29,6 +32,7 @@ import { NewsListComponent } from './news/news-list/news-list.component';
 import { NewsProfileComponent } from './news/news-profile/news-profile.component';
 import { NewsRegisterComponent } from './news/news-register/news-register.component';
 import { NewsEditComponent } from './news/news-edit/news-edit.component';
+import { LogsListComponent } from './logs/logs-list/logs-list.component';
 
 @NgModule({
   declarations: [
@@ -59,10 +63,13 @@ import { NewsEditComponent } from './news/news-edit/news-edit.component';
     NewsProfileComponent,
     NewsRegisterComponent,
     NewsEditComponent,
+    LogsListComponent,
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
