@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -33,6 +35,7 @@ import { NewsProfileComponent } from './news/news-profile/news-profile.component
 import { NewsRegisterComponent } from './news/news-register/news-register.component';
 import { NewsEditComponent } from './news/news-edit/news-edit.component';
 import { LogsListComponent } from './logs/logs-list/logs-list.component';
+import { HeaderComponent } from './navigation/header/header.component';
 
 @NgModule({
   declarations: [
@@ -64,12 +67,16 @@ import { LogsListComponent } from './logs/logs-list/logs-list.component';
     NewsRegisterComponent,
     NewsEditComponent,
     LogsListComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

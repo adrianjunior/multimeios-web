@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" class="mat-elevation-z4">
+  <!--<div>
+      <button mat-icon-button (click)="onGoBack()">
+          <mat-icon>arrow_back</mat-icon>
+      </button>
+  </div>-->
+  <div>
+      LOGO
+  </div>
+  <div fxFlex></div>
+  <div>
+      <ul fxLayout class="toolbar-items">
+          <li fxFlex class="toolbar-item"><a routerLink="/registrar-livro">Cadastrar Novo Livro</a></li>
+          <mat-divider [vertical]="true"></mat-divider>
+          <li fxFlex class="toolbar-item"><a routerLink="/registrar-usuario">Cadastrar Novo Usuário</a></li>
+          <mat-divider [vertical]="true"></mat-divider>
+          <li fxFlex class="toolbar-item"><a routerLink="/lista-livros">Lista de Livros</a></li>
+          <mat-divider [vertical]="true"></mat-divider>
+          <li fxFlex class="toolbar-item"><a routerLink="/lista-usuarios">Lista de Usuários</a></li>
+          <mat-divider [vertical]="true"></mat-divider>
+          <li fxFlex class="toolbar-item"><a style="cursor: pointer" (click)="onLogout()">Sair</a></li>
+      </ul>
+  </div>
+</mat-toolbar>
