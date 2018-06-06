@@ -1,3 +1,47 @@
-<p>
-  book-profile works!
-</p>
+<section class="signin-form" fxLayoutAlign="center" fxLayoutGap="15px" style="margin-top: 20px;">
+  <mat-card fxFlex="600px">
+
+    <!-- Read-only form -->
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px">
+      <mat-card-title>Informações do Livro</mat-card-title>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Título do Livro" readonly value="Título do Livro">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Autor do Livro" readonly value="Autor do Livro">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Editora do Livro" readonly value="Editora do Livro">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Gêneros" readonly value="Gênero do Livro">
+      </mat-form-field>
+
+      <div style="width: 400px;" fxLayout fxLayoutGap="20px" fxFlexAlign="center">
+
+        <mat-form-field class="h-input">
+          <input type="number" matInput placeholder="Ano da Edição" readonly value="2000">
+        </mat-form-field>
+
+        <mat-form-field class="h-input">
+          <input type="text" matInput placeholder="Edição" readonly value="Xª Edição">
+        </mat-form-field>
+
+        <mat-form-field class="h-input">
+          <input type="number" matInput placeholder="Nº de Exemplares" readonly value="5">
+        </mat-form-field>
+
+        <mat-form-field class="h-input">
+          <input type="number" matInput placeholder="Disponíveis" readonly value="5">
+        </mat-form-field>
+
+      </div>
+
+      <button mat-raised-button color="primary" class="bp-btn">Editar Livro</button>
+    </form>    
+  </mat-card>
+</section>

@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { Location } from '@angular/common';
+
+import { Book } from '../book.model';
 
 @Component({
   selector: 'app-book-profile',
@@ -7,7 +12,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookProfileComponent implements OnInit {
 
-  constructor() { }
+  private id: string;
+  private book: Book;
+
+  constructor(private router: Router, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
   }
