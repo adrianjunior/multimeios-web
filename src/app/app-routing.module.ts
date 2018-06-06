@@ -50,13 +50,13 @@ const routes: Routes = [
   { path: 'perfil-equipamento/:id', component: EquipProfileComponent}, 
   { path: 'registrar-equipamento', component: EquipRegisterComponent}, 
   { path: 'editar-noticia/:id', component: NewsEditComponent}, 
-  { path: 'lista-noticia', component: NewsListComponent}, 
+  { path: 'lista-noticias', component: NewsListComponent}, 
   { path: 'perfil-noticia/:id', component: NewsProfileComponent}, 
   { path: 'registrar-noticia', component: NewsRegisterComponent}, 
   { path: 'editar-sala/:id', component: RoomEditComponent}, 
   { path: 'lista-salas', component: RoomListComponent}, 
   { path: 'perfil-sala/:id', component: RoomProfileComponent}, 
-  { path: 'registar-sala', component: RoomRegisterComponent},
+  { path: 'registrar-sala', component: RoomRegisterComponent},
   { path: 'logs', component: LogsListComponent},
 ]
 

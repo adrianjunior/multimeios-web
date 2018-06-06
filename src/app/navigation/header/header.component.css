@@ -1,24 +1,16 @@
 a {
     text-decoration: none;
-    color: white;
-}
-
-a:hover,
-a:active {
-    color: lightgray;
+    color: #212121;
 }
 
 .toolbar-items{
     list-style: none;
     padding: 0;
-    margin: 0; 
+    margin: 0;
 }
 
 .toolbar-item{
-    padding-left: 10px;
-    padding-right: 10px;
-} 
-
-mat-divider{
-    border-color: #fcfcfc;
+    display: inline-flex;
+    vertical-align: middle;
+    font-size: 20px;
 }
