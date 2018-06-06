@@ -1,3 +1,19 @@
-<p>
-  news-register works!
-</p>
+<section class="signin-form" fxLayoutAlign="center" fxLayoutGap="15px" style="margin-top: 20px;">
+  <mat-card fxFlex="600px">
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <mat-card-title>Registrar Novo Livro</mat-card-title>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Título da Notícia" ngModel name="title" required #bnInput="ngModel">
+        <mat-error *ngIf="bnInput.hasError('required')">Você deve colocar o título da notícia.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <textarea type="text" matInput placeholder="Corpo da Notícia" ngModel name="body" required #bdInput="ngModel"></textarea>
+        <mat-error *ngIf="bdInput.hasError('required')">Você deve colocar um corpo da notícia.</mat-error>
+      </mat-form-field>
+
+      <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Postar</button>
+    </form>    
+  </mat-card>
+</section>
