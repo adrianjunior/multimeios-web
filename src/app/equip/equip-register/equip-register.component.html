@@ -1,3 +1,19 @@
-<p>
-  equip-register works!
-</p>
+<section class="signin-form" fxLayoutAlign="center" fxLayoutGap="15px" style="margin-top: 20px;">
+  <mat-card fxFlex="600px">
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <mat-card-title>Registrar Novo Equipamento</mat-card-title>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Nome do Equipamento" ngModel name="name" required #enInput="ngModel">
+        <mat-error *ngIf="enInput.hasError('required')">Você deve colocar o nome do equipamento.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Tipo de Equipamento" ngModel name="type" required #etInput="ngModel">
+        <mat-error *ngIf="etInput.hasError('required')">Você deve colocar o tipo de equipamento.</mat-error>
+      </mat-form-field>
+
+      <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Registrar</button>
+    </form>    
+  </mat-card>
+</section>

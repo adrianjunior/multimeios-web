@@ -5,7 +5,7 @@
 
       <mat-form-field class="v-input">
         <input type="text" matInput placeholder="Título do Livro" ngModel name="title" required #bnInput="ngModel">
-        <mat-error *ngIf="bnInput.hasError('required')">Você deve colocar o nome do livro.</mat-error>
+        <mat-error *ngIf="bnInput.hasError('required')">Você deve colocar o título do livro.</mat-error>
       </mat-form-field>
 
       <mat-form-field class="v-input">
@@ -38,7 +38,7 @@
         </mat-form-field>
       </div>
 
-      <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Entrar</button>
+      <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Registrar</button>
     </form>    
   </mat-card>
 </section>
