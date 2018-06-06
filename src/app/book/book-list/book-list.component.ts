@@ -36,7 +36,7 @@ export class BookListComponent implements OnInit, AfterViewInit {
   }
 
   onGoToProfile(id) {
-    this.router.navigateByUrl('perfil-do-livro/' + id);
+    this.router.navigateByUrl('perfil-livro/' + id);
     console.log(id);
   }
 

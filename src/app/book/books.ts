@@ -1,5 +1,6 @@
 export default [
     {
+        id: 'book1',
         title: 'Livro 1',
         author: 'Autor 1',
         editor: 'Editora 1',
@@ -10,6 +11,7 @@ export default [
         available: 1
     },
     {
+        id: 'book2',
         title: 'Livro 2',
         author: 'Autor 2',
         editor: 'Editora 2',
@@ -20,6 +22,7 @@ export default [
         available: 2
     },
     {
+        id: 'book3',
         title: 'Livro 3',
         author: 'Autor 3',
         editor: 'Editora 3',
@@ -30,6 +33,7 @@ export default [
         available: 3
     },
     {
+        id: 'book4',
         title: 'Livro 4',
         author: 'Autor 4',
         editor: 'Editora 4',
@@ -40,6 +44,7 @@ export default [
         available: 4
     },
     {
+        id: 'book5',
         title: 'Livro 5',
         author: 'Autor 5',
         editor: 'Editora 5',
@@ -50,6 +55,7 @@ export default [
         available: 5
     },
     {
+        id: 'book6',
         title: 'Livro 6',
         author: 'Autor 6',
         editor: 'Editora 6',
@@ -60,6 +66,7 @@ export default [
         available: 6
     },
     {
+        id: 'book7',
         title: 'Livro 7',
         author: 'Autor 7',
         editor: 'Editora 7',
@@ -70,6 +77,7 @@ export default [
         available: 7
     },
     {
+        id: 'book8',
         title: 'Livro 8',
         author: 'Autor 8',
         editor: 'Editora 8',
@@ -80,6 +88,7 @@ export default [
         available: 8
     },
     {
+        id: 'book9',
         title: 'Livro 9',
         author: 'Autor 9',
         editor: 'Editora 9',
@@ -90,6 +99,7 @@ export default [
         available: 9
     },
     {
+        id: 'book10',
         title: 'Livro 10',
         author: 'Autor 10',
         editor: 'Editora 10',
