@@ -1,3 +1,29 @@
-<p>
-  room-list works!
-</p>
+<div>
+  <h1 id="title">Lista de Salas</h1>
+</div>
+
+<div class="container mat-elevation-z4">
+  <div class="header mat-elevation-z2">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Pesquisar">
+    </mat-form-field>
+  </div>
+  <mat-table #table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Nome da Sala </mat-header-cell>
+      <mat-cell *matCellDef="let room"> {{room.name}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let room; columns: displayedColumns;"
+              class="row"
+              (click)="onGoToProfile(room.id)">
+    </mat-row>
+  </mat-table>
+
+  <mat-paginator #paginator
+                 [pageSize]="5"
+                 [showFirstLastButtons]="true">
+  </mat-paginator>
+</div>

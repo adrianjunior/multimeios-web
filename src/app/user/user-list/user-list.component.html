@@ -1,3 +1,133 @@
-<p>
-  user-list works!
-</p>
+<div id="overlay">
+  <mat-spinner class="spinner" [color]="primary"></mat-spinner>
+</div>
+
+<div>
+  <h1 id="title">Lista de Usuários</h1>
+</div>
+
+<div class="container mat-elevation-z4">
+  <mat-tab-group>
+
+    <mat-tab label="Alunos">
+      <div class="header mat-elevation-z2">
+        <mat-form-field>
+          <input matInput (keyup)="sApplyFilter($event.target.value)" placeholder="Pesquisar">
+        </mat-form-field>
+      </div>
+      <mat-table #sTable #sSort="matSort" [dataSource]="sDataSource" matSort>
+
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Nome </mat-header-cell>
+          <mat-cell *matCellDef="let student"> {{student.name}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="grade">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Série </mat-header-cell>
+          <mat-cell *matCellDef="let student"> {{student.grade}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="class">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Turma </mat-header-cell>
+          <mat-cell *matCellDef="let student"> {{student.class}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Telefone </mat-header-cell>
+          <mat-cell *matCellDef="let student"> {{student.phone}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> E-Mail </mat-header-cell>
+          <mat-cell *matCellDef="let student"> {{student.email}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="sDisplayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let student; columns: sDisplayedColumns;" class="row" (click)="onGoToProfile(student.id)">
+        </mat-row>
+      </mat-table>
+
+      <mat-paginator #sPaginator [pageSize]="5" [showFirstLastButtons]="true">
+      </mat-paginator>
+    </mat-tab>
+
+    <mat-tab label="Professores">
+      <div class="header mat-elevation-z2">
+        <mat-form-field>
+          <input matInput (keyup)="tApplyFilter($event.target.value)" placeholder="Pesquisar">
+        </mat-form-field>
+      </div>
+      <mat-table #tTable #tSort="matSort" [dataSource]="tDataSource" matSort>
+
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Nome </mat-header-cell>
+          <mat-cell *matCellDef="let teacher"> {{teacher.name}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="role">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Matéria </mat-header-cell>
+          <mat-cell *matCellDef="let teacher"> {{teacher.role}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="effective">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Tipo </mat-header-cell>
+          <mat-cell *matCellDef="let teacher">{{teacher.effective}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Telefone </mat-header-cell>
+          <mat-cell *matCellDef="let teacher">{{teacher.phone}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> E-Mail </mat-header-cell>
+          <mat-cell *matCellDef="let teacher">{{teacher.email}}</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="tDisplayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let teacher; columns: tDisplayedColumns;" class="row" (click)="onGoToProfile(teacher.id)">
+        </mat-row>
+      </mat-table>
+
+      <mat-paginator #tPaginator [pageSize]="5" [showFirstLastButtons]="true">
+      </mat-paginator>
+    </mat-tab>
+
+    <mat-tab label="Funcionários">
+      <div class="header mat-elevation-z2">
+        <mat-form-field>
+          <input matInput (keyup)="eApplyFilter($event.target.value)" placeholder="Pesquisar">
+        </mat-form-field>
+      </div>
+      <mat-table #eTable #eSort="matSort" [dataSource]="eDataSource" matSort>
+
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Nome </mat-header-cell>
+          <mat-cell *matCellDef="let staff"> {{staff.name}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="role">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Função </mat-header-cell>
+          <mat-cell *matCellDef="let staff"> {{staff.role}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Telefone </mat-header-cell>
+          <mat-cell *matCellDef="let staff"> {{staff.phone}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> E-Mail </mat-header-cell>
+          <mat-cell *matCellDef="let staff"> {{staff.email}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="eDisplayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let staff; columns: eDisplayedColumns;" class="row" (click)="onGoToProfile(staff.id)">
+        </mat-row>
+      </mat-table>
+
+      <mat-paginator #ePaginator [pageSize]="5" [showFirstLastButtons]="true">
+      </mat-paginator>
+    </mat-tab>
+  </mat-tab-group>
+</div>

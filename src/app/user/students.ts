@@ -1,5 +1,6 @@
 export default [
     {
+        id: 'student1',
         name: 'Aluno 1',
         grade: 'Série 1',
         class: 'Turma 1',
@@ -7,6 +8,7 @@ export default [
         email: 'aluno1@email.com' 
     },
     {
+        id: 'student2',
         name: 'Aluno 2',
         grade: 'Série 2',
         class: 'Turma 2',
@@ -14,6 +16,7 @@ export default [
         email: 'aluno2@email.com' 
     },
     {
+        id: 'student3',
         name: 'Aluno 3',
         grade: 'Série 3',
         class: 'Turma 3',
@@ -21,6 +24,7 @@ export default [
         email: 'aluno3@email.com' 
     },
     {
+        id: 'student4',
         name: 'Aluno 4',
         grade: 'Série 4',
         class: 'Turma 4',
@@ -28,6 +32,7 @@ export default [
         email: 'aluno4@email.com' 
     },
     {
+        id: 'student5',
         name: 'Aluno 5',
         grade: 'Série 5',
         class: 'Turma 5',
@@ -35,6 +40,7 @@ export default [
         email: 'aluno5@email.com' 
     },
     {
+        id: 'student6',
         name: 'Aluno 6',
         grade: 'Série 6',
         class: 'Turma 6',
@@ -42,6 +48,7 @@ export default [
         email: 'aluno6@email.com' 
     },
     {
+        id: 'student7',
         name: 'Aluno 7',
         grade: 'Série 7',
         class: 'Turma 7',
@@ -49,6 +56,7 @@ export default [
         email: 'aluno7@email.com' 
     },
     {
+        id: 'student8',
         name: 'Aluno 8',
         grade: 'Série 8',
         class: 'Turma 8',
@@ -56,6 +64,7 @@ export default [
         email: 'aluni8@email.com' 
     },
     {
+        id: 'student9',
         name: 'Aluno 9',
         grade: 'Série 9',
         class: 'Turma 9',
@@ -63,6 +72,7 @@ export default [
         email: 'aluno9@email.com' 
     },
     {
+        id: 'student10',
         name: 'Aluno 10',
         grade: 'Série 10',
         class: 'Turma 10',

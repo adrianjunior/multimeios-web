@@ -1,5 +1,6 @@
 export default [
     {
+        id: 'teacher1',
         name: 'Professor 1',
         role: 'Matéria 1',
         effective: true,
@@ -7,6 +8,7 @@ export default [
         email: 'professor1@email.com' 
     },
     {
+        id: 'teacher2',
         name: 'Professor 2',
         role: 'Matéria 2',
         effective: false,
@@ -14,6 +16,7 @@ export default [
         email: 'professor2@email.com' 
     },
     {
+        id: 'teacher3',
         name: 'Professor 3',
         role: 'Matéria 3',
         effective: true,
@@ -21,6 +24,7 @@ export default [
         email: 'professor3@email.com' 
     },
     {
+        id: 'teacher4',
         name: 'Professor 4',
         role: 'Matéria 4',
         effective: false,
@@ -28,6 +32,7 @@ export default [
         email: 'professor4@email.com' 
     },
     {
+        id: 'teacher5',
         name: 'Professor 5',
         role: 'Matéria 5',
         effective: true,
@@ -35,6 +40,7 @@ export default [
         email: 'professor5@email.com' 
     },
     {
+        id: 'teacher6',
         name: 'Professor 6',
         role: 'Matéria 6',
         effective: false,
@@ -42,6 +48,7 @@ export default [
         email: 'professor6@email.com' 
     },
     {
+        id: 'teacher7',
         name: 'Professor 7',
         role: 'Matéria 7',
         effective: true,
@@ -49,6 +56,7 @@ export default [
         email: 'professor7@email.com' 
     },
     {
+        id: 'teacher8',
         name: 'Professor 8',
         role: 'Matéria 8',
         effective: false,
@@ -56,6 +64,7 @@ export default [
         email: 'professor8@email.com' 
     },
     {
+        id: 'teacher9',
         name: 'Professor 9',
         role: 'Matéria 9',
         effective: true,
@@ -63,6 +72,7 @@ export default [
         email: 'professor9@email.com' 
     },
     {
+        id: 'teacher10',
         name: 'Professor 10',
         role: 'Matéria 10',
         effective: false,
