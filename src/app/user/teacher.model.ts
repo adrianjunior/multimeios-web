@@ -3,6 +3,6 @@ export interface Teacher {
     name: string;
     role: string;
     effective: boolean;
-    number?: string;
+    phone?: string;
     email?: string;
 }
