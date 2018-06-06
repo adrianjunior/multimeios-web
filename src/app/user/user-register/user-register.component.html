@@ -1,3 +1,101 @@
-<p>
-  user-register works!
-</p>
+<section class="signin-form" fxLayoutAlign="center" fxLayoutGap="15px" style="margin-top: 20px;">
+  <mat-tab-group class="mat-elevation-z2">
+
+    <mat-tab label="Registrar Aluno">
+      <mat-card fxFlex="600px" class="mat-elevation-z2">
+        <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" #form1="ngForm" (ngSubmit)="onSubmitStudent(form1)">
+          <mat-card-title>Registrar Novo Aluno</mat-card-title>
+
+          <mat-form-field class="v-input">
+            <input type="text" matInput placeholder="Nome do Aluno" ngModel name="name" required #unInput="ngModel">
+            <mat-error *ngIf="unInput.hasError('required')">Você deve colocar o nome do aluno.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="v-input">
+            <input type="text" matInput placeholder="Série do Aluno" ngModel name="grade" required #ugInput="ngModel">
+            <mat-error *ngIf="ugInput.hasError('required')">Você deve colocar a série do aluno.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="v-input">
+            <input type="text" matInput placeholder="Turma do Aluno" ngModel name="class" required #ucInput="ngModel">
+            <mat-error *ngIf="ucInput.hasError('required')">Você deve colocar a turma do aluno.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="v-input">
+            <input type="text" matInput placeholder="Telefone do Aluno" ngModel name="phone">
+          </mat-form-field>
+
+          <mat-form-field class="v-input">
+            <input type="text" matInput placeholder="E-Mail do Aluno" ngModel name="email">
+          </mat-form-field>
+
+          <button type="submit" mat-raised-button color="primary" [disabled]="form1.invalid">Registrar Aluno</button>
+        </form>    
+      </mat-card>
+    </mat-tab>
+
+    <mat-tab label="Registrar Professor">
+      <mat-card fxFlex="600px">
+        <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" #form2="ngForm" (ngSubmit)="onSubmitTeacher(form2)">
+          <mat-card-title>Registrar Novo Professor</mat-card-title>
+
+          <mat-form-field class="v-input">
+            <input type="text" matInput placeholder="Nome do Professor" ngModel name="name" required #unInput="ngModel">
+            <mat-error *ngIf="unInput.hasError('required')">Você deve colocar o nome do professor.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="v-input">
+            <input type="text" matInput placeholder="Matéria do Professor" ngModel name="role" required #ui1Input="ngModel">
+            <mat-error *ngIf="ui1Input.hasError('required')">Você deve colocar a matéria do professor.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="v-input">
+            <mat-select placeholder="Efetivo ou Temporário?" ngModel name="effective">
+              <mat-option *ngFor="let jobtype of jobtypes" [value]="jobtype.value">
+                {{jobtype.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="v-input">
+            <input type="text" matInput placeholder="Telefone do Professor" ngModel name="phone">
+          </mat-form-field>
+
+          <mat-form-field class="v-input">
+            <input type="text" matInput placeholder="E-Mail do Professor" ngModel name="email">
+          </mat-form-field>
+
+          <button type="submit" mat-raised-button color="primary" [disabled]="form2.invalid">Registrar Professor</button>
+        </form>    
+      </mat-card>
+    </mat-tab>
+
+    <mat-tab label="Registrar Servidor">
+      <mat-card fxFlex="600px">
+        <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" #form3="ngForm" (ngSubmit)="onSubmitStaff(form3)">
+          <mat-card-title>Registrar Novo Servidor</mat-card-title>
+
+          <mat-form-field class="v-input">
+            <input type="text" matInput placeholder="Nome do Servidor" ngModel name="name" required #unInput="ngModel">
+            <mat-error *ngIf="unInput.hasError('required')">Você deve colocar o nome do servidor.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="v-input">
+            <input type="text" matInput placeholder="Função do Servidor" ngModel name="role" required #ui1Input="ngModel">
+            <mat-error *ngIf="ui1Input.hasError('required')">Você deve colocar a função do servidor.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="v-input">
+            <input type="text" matInput placeholder="Telefone do Servidor" ngModel name="phone">
+          </mat-form-field>
+
+          <mat-form-field class="v-input">
+            <input type="text" matInput placeholder="E-Mail do Servidor" ngModel name="email">
+          </mat-form-field>
+
+          <button type="submit" mat-raised-button color="primary" [disabled]="form3.invalid">Registrar Servidor</button>
+        </form>    
+      </mat-card>
+    </mat-tab>
+  </mat-tab-group>
+</section>
