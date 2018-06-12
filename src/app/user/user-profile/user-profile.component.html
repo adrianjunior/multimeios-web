@@ -1,3 +1,77 @@
-<p>
-  user-profile works!
-</p>
+<section class="signin-form" fxLayoutAlign="center" fxLayoutGap="15px" style="margin-top: 20px;">
+  <mat-card fxFlex="600px">
+
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" *ngIf="type == 'student'">
+      
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Nome do Aluno" readonly value="Nome do Aluno">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Série do Aluno" readonly value="Série do Aluno">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Turma do Aluno" readonly value="Turma do Aluno">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Telefone do Aluno" readonly value="Telefone do Aluno">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Email do Aluno" readonly value="Email do Aluno">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="bp-btn">Editar Aluno</button>
+    </form>
+
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" *ngIf="type == 'teacher'">
+      <mat-card-title>Informações do Professor</mat-card-title>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Nome do Professor" readonly value="Nome do Professor">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Matéria do Professor" readonly value="Matéria do Professor">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Emprego do Professor" readonly value="Efetivo">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Telefone do Professor" readonly value="Telefone do Professor">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Email do Professor" readonly value="Email do Professor">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="bp-btn">Editar Professor</button>
+    </form>
+
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" *ngIf="type == 'staff'">
+      <mat-card-title>Informações do Servidor</mat-card-title>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Nome do Servidor" readonly value="Nome do Servidor">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Função do Servidor" readonly value="Função do Servidor">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Telefone do Servidor" readonly value="Telefone do Servidor">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Email do Servidor" readonly value="Email do Servidor">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="bp-btn">Editar Servidor</button>
+    </form>
+  </mat-card>
+</section>

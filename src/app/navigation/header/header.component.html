@@ -7,6 +7,10 @@
   <div>
       LOGO
   </div>-->
+    <div>
+        <h1>{{pageName}}</h1>
+    </div>
+
     <div fxFlex></div>
     <div>
         <ul fxLayout class="toolbar-items">
@@ -20,12 +24,14 @@
             <li fxFlex>
                 <button mat-button [matMenuTriggerFor]="books" class="toolbar-item">Livros</button>
             </li>
+            <!--
             <li fxFlex>
                 <button mat-button [matMenuTriggerFor]="equips" class="toolbar-item">Equipamentos</button>
             </li>
             <li fxFlex>
                 <button mat-button [matMenuTriggerFor]="rooms" class="toolbar-item">Salas</button>
             </li>
+            -->
             <li fxFlex>
                 <button mat-button class="toolbar-item" (click)="onLogout()">Sair</button>
             </li>
@@ -44,6 +50,7 @@
 </mat-menu>
 
 <mat-menu #books="matMenu">
+    <button mat-menu-item (click)="onGoToBookLoan()"><mat-icon>library_books</mat-icon>Alugar Livros</button>
     <button mat-menu-item (click)="onGoToBookList()"><mat-icon>library_books</mat-icon>Lista de Livros</button>
     <button mat-menu-item (click)="onGoToRegisterBook()"><mat-icon>library_add</mat-icon>Registrar Novo Livro</button>
 </mat-menu>

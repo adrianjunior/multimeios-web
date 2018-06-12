@@ -1,3 +1,29 @@
-<p>
-  news-profile works!
-</p>
+<section class="signin-form" fxLayoutAlign="center" fxLayoutGap="15px" style="margin-top: 20px;">
+  <mat-card fxFlex="600px">
+
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px">
+      <mat-card-title>Informações da Notícia</mat-card-title>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Título da Notícia" readonly value="Título da Notícia">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Data e Hora" readonly value="DD/MM/AAAA - HH:MM">
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <textarea type="text" matInput placeholder="Corpo da Notícia" rows="7" readonly style="text-align: justify;
+        white-space: normal;"
+        value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elit risus, finibus et lacus in, maximus viverra velit. Phasellus aliquam eu est sed fermentum. Mauris fermentum tempus nisi eget varius. Donec rhoncus vel sem et congue. Cras lacus eros, eleifend et metus eget, ultricies vestibulum quam. Suspendisse sagittis quam vel enim pulvinar, et tincidunt eros faucibus. Phasellus dictum molestie accumsan. Integer eget dolor justo. Nunc pharetra, augue eu suscipit aliquet, velit enim venenatis metus, ut scelerisque leo quam ut mi. Proin imperdiet consectetur accumsan. Morbi tincidunt mi ac eros mollis, id cursus dui posuere. Donec hendrerit pretium ex porta consectetur. In interdum odio ut lacinia accumsan.
+
+        Ut hendrerit elit lacus, et tempus eros vestibulum vel. Donec diam diam, ornare a ante eget, rhoncus dignissim quam. Fusce vel volutpat elit. Aenean in libero id elit facilisis pulvinar nec a dolor. Donec vehicula augue sed eros pellentesque tincidunt. Sed ut porta libero. Quisque dolor sem, iaculis a convallis et, commodo et est. Cras eleifend nisi eu nulla tristique, condimentum porta magna maximus. Donec condimentum tempus neque, vitae ultricies lacus accumsan et. Aliquam eu mauris eget sapien hendrerit consectetur sed vel nulla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas a ipsum porta, faucibus est et, euismod risus. Nam pharetra euismod rutrum. Duis dapibus dolor et ligula condimentum, in vehicula metus lobortis. Curabitur ullamcorper convallis enim, eget eleifend purus. Morbi sed maximus velit.
+        
+        Etiam non venenatis ligula, vel interdum nibh. Proin feugiat nulla eget diam mattis elementum. Nullam nec mauris massa. Nulla consectetur iaculis lacus, vitae dignissim massa finibus a. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec consectetur lacus quis mauris tristique, sit amet tempus erat tempus. Ut tempus rhoncus ex at egestas. Vivamus blandit augue at sem aliquam rutrum. Etiam ac purus tristique, porta dolor quis, fringilla risus. Nullam interdum ac orci at viverra. Maecenas consequat at mi vitae suscipit. Donec mi tortor, vehicula vel velit luctus, pulvinar fringilla lectus.">
+        </textarea>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="bp-btn">Editar Notícia</button>
+    </form>
+  </mat-card>
+</section>

@@ -6,6 +6,7 @@ import { BookListComponent } from './book/book-list/book-list.component';
 import { BookEditComponent } from './book/book-edit/book-edit.component';
 import { BookProfileComponent } from './book/book-profile/book-profile.component';
 import { BookRegisterComponent } from './book/book-register/book-register.component';
+import { BookLoanComponent } from './book/book-loan/book-loan.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserProfileComponent } from './user/user-profile/user-profile.component';
@@ -35,12 +36,13 @@ const routes: Routes = [
   { path: 'editar-livro/:id', component: BookEditComponent},
   { path: 'lista-livros', component: BookListComponent},
   { path: 'perfil-livro/:id', component: BookProfileComponent}, 
-  { path: 'registrar-livro', component: BookRegisterComponent}, 
-  { path: 'editar-usuario/:id', component: UserEditComponent}, 
+  { path: 'registrar-livro', component: BookRegisterComponent},
+  { path: 'alugar-livros', component: BookLoanComponent},
+  { path: 'editar-usuario/:type/:id', component: UserEditComponent}, 
   { path: 'lista-usuarios', component: UserListComponent}, 
-  { path: 'perfil-usuario/:id', component: UserProfileComponent}, 
+  { path: 'perfil-usuario/:type/:id', component: UserProfileComponent}, 
   { path: 'registrar-usuario', component: UserRegisterComponent}, 
-  { path: 'reservas-usuario/:id', component: UserReservationsComponent}, 
+  { path: 'reservas-usuario/:type/:id', component: UserReservationsComponent}, 
   { path: 'editar-funcionario/:id', component: EmployeeEditComponent}, 
   { path: 'lista-funcionarios', component: EmployeeListComponent}, 
   { path: 'perfil-funcionario/:id', component: EmployeeProfileComponent}, 

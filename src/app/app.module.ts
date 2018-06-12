@@ -36,6 +36,8 @@ import { NewsRegisterComponent } from './news/news-register/news-register.compon
 import { NewsEditComponent } from './news/news-edit/news-edit.component';
 import { LogsListComponent } from './logs/logs-list/logs-list.component';
 import { HeaderComponent } from './navigation/header/header.component';
+import { BookLoanComponent } from './book/book-loan/book-loan.component';
+import { UserValidationComponent } from './book/book-loan/user-validation/user-validation.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +70,8 @@ import { HeaderComponent } from './navigation/header/header.component';
     NewsEditComponent,
     LogsListComponent,
     HeaderComponent,
+    BookLoanComponent,
+    UserValidationComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,6 +83,7 @@ import { HeaderComponent } from './navigation/header/header.component';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [UserValidationComponent]
 })
 export class AppModule { }

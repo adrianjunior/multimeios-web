@@ -6,6 +6,17 @@
   </div>
   <mat-table #table [dataSource]="dataSource" matSort>
 
+    <ng-container matColumnDef="select">
+      <mat-header-cell *matHeaderCellDef>
+        <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()">
+        </mat-checkbox>
+      </mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)">
+        </mat-checkbox>
+      </mat-cell>
+    </ng-container>
+
     <ng-container matColumnDef="title">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Título </mat-header-cell>
       <mat-cell *matCellDef="let book"> {{book.title}} </mat-cell>
@@ -27,10 +38,12 @@
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let book; columns: displayedColumns;" class="row" (click)="onGoToProfile(book.id)">
+    <mat-row *matRowDef="let book; columns: displayedColumns;" class="row" (click)="selection.toggle(book)">
     </mat-row>
   </mat-table>
 
   <mat-paginator #paginator [pageSize]="5" [showFirstLastButtons]="true">
   </mat-paginator>
+
+  <button mat-raised-button color="primary" (click)="onLoan()" [disabled]="this.selection.selected.length === 0">Escolher estes Livros</button>
 </div>

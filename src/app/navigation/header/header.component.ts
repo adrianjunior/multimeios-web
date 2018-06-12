@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input  } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -9,9 +9,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor( private location: Location, private router: Router ) { }
+  pageName: string;
+
+  constructor( private location: Location, private router: Router, private route: ActivatedRoute ) { }
 
   ngOnInit() {
+    
   }
 
   onGoBack() {
@@ -20,26 +23,37 @@ export class HeaderComponent implements OnInit {
 
   onGoToUserList() {
     this.router.navigateByUrl('lista-usuarios');
+    this.pageName = 'Lista de Usuários';
   }
 
   onGoToRegisterUser() {
     this.router.navigateByUrl('registrar-usuario');
+    this.pageName = 'Registrar Novo Usuário';
   }
 
   onGoToNewsList() {
     this.router.navigateByUrl('lista-noticias');
+    this.pageName = 'Lista de Notícias';
   }
 
   onGoToRegisterNews() {
     this.router.navigateByUrl('registrar-noticia');
+    this.pageName = 'Postar Nova Notícia';
+  }
+
+  onGoToBookLoan() {
+    this.router.navigateByUrl('alugar-livros');
+    this.pageName = 'Alugar Livros';
   }
 
   onGoToBookList() {
     this.router.navigateByUrl('lista-livros');
+    this.pageName = 'Lista de Livros';
   }
 
   onGoToRegisterBook() {
     this.router.navigateByUrl('registrar-livro');
+    this.pageName = 'Registrar Novo Livro';
   }
 
   onGoToEquipList() {

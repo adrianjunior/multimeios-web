@@ -66,8 +66,8 @@ export class UserListComponent implements OnInit, AfterViewInit {
     this.cdRef.detectChanges();
   }
 
-  onGoToProfile(id) {
-    this.router.navigateByUrl('perfil-usuario/' + id);
+  onGoToProfile(id, type) {
+    this.router.navigateByUrl(`perfil-usuario/${type}/${id}`);
     console.log(id);
   }
 

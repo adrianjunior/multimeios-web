@@ -1,0 +1,134 @@
+<mat-horizontal-stepper [linear]="false" #stepper>
+    <mat-step>
+        <ng-template matStepLabel>Livro(s) para alugar</ng-template>
+        <mat-list>
+            <mat-list-item *ngFor="let book of books">
+                <h4 mat-line>{{book.title}}</h4>
+                <p mat-line>{{book.author}}</p>
+            </mat-list-item>
+        </mat-list>
+        <mat-dialog-actions>
+            <button mat-button [mat-dialog-close]="false">Voltar</button>
+            <button mat-button color="primary" matStepperNext>Confirmar</button>
+        </mat-dialog-actions>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Dados do Usuário</ng-template>
+        <div *ngIf="formType === 1">
+            <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #form1="ngForm" (ngSubmit)="onSubmit()">
+                <mat-form-field class="v-input">
+                    <input type="text" matInput placeholder="Nome de Usuário" ngModel name="user" required #unInput="ngModel">
+                    <mat-error *ngIf="unInput.hasError('required')">Você deve colocar o nome de usuário.</mat-error>
+                </mat-form-field>
+                <mat-form-field class="v-input">
+                    <input type="password" matInput placeholder="Senha" ngModel name="password" required #unInput="ngModel">
+                    <mat-error *ngIf="unInput.hasError('required')">Você deve colocar a senha.</mat-error>
+                </mat-form-field>
+                <mat-dialog-actions>
+                    <button mat-button matStepperPrevious>Voltar</button>
+                    <button mat-button [disabled]="form1.invalid" type="submit" color="primary" [mat-dialog-close]="true">Confirmar</button>
+                </mat-dialog-actions>
+            </form>
+            <button mat-button color="primary" class="btn-center" (click)="changeForm()">Usuário não possui uma conta.</button>
+        </div>
+
+        <div *ngIf="formType === 2">
+            <mat-tab-group>
+                <mat-tab label="Registrar Aluno">
+                    <mat-card fxFlex="500px" class="mat-elevation-z2">
+                        <form fxLayout="column" fxLayoutAlign="center center" #form1="ngForm" (ngSubmit)="onSubmitStudent(form1)">
+
+                            <mat-form-field class="v-input">
+                                <input type="text" matInput placeholder="Nome do Aluno" ngModel name="name" required #unInput="ngModel">
+                                <mat-error *ngIf="unInput.hasError('required')">Você deve colocar o nome do aluno.</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field class="v-input">
+                                <input type="text" matInput placeholder="Série do Aluno" ngModel name="grade" required #ugInput="ngModel">
+                                <mat-error *ngIf="ugInput.hasError('required')">Você deve colocar a série do aluno.</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field class="v-input">
+                                <input type="text" matInput placeholder="Turma do Aluno" ngModel name="class" required #ucInput="ngModel">
+                                <mat-error *ngIf="ucInput.hasError('required')">Você deve colocar a turma do aluno.</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field class="v-input">
+                                <input type="text" matInput placeholder="Telefone do Aluno" ngModel name="phone">
+                            </mat-form-field>
+
+                            <mat-form-field class="v-input">
+                                <input type="text" matInput placeholder="E-Mail do Aluno" ngModel name="email">
+                            </mat-form-field>
+
+                            <button type="submit" mat-raised-button color="primary" [disabled]="form1.invalid" [mat-dialog-close]="true" >Registrar Aluno e Alugar o Livro</button>
+                        </form>
+                    </mat-card>
+                </mat-tab>
+
+                <mat-tab label="Registrar Professor">
+                    <mat-card fxFlex="500px">
+                        <form fxLayout="column" fxLayoutAlign="center center" #form2="ngForm" (ngSubmit)="onSubmitTeacher(form2)">
+
+                            <mat-form-field class="v-input">
+                                <input type="text" matInput placeholder="Nome do Professor" ngModel name="name" required #unInput="ngModel">
+                                <mat-error *ngIf="unInput.hasError('required')">Você deve colocar o nome do professor.</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field class="v-input">
+                                <input type="text" matInput placeholder="Matéria do Professor" ngModel name="role" required #ui1Input="ngModel">
+                                <mat-error *ngIf="ui1Input.hasError('required')">Você deve colocar a matéria do professor.</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field class="v-input">
+                                <mat-select placeholder="Efetivo ou Temporário?" ngModel name="effective">
+                                    <mat-option *ngFor="let jobtype of jobtypes" [value]="jobtype.value">
+                                        {{jobtype.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+
+                            <mat-form-field class="v-input">
+                                <input type="text" matInput placeholder="Telefone do Professor" ngModel name="phone">
+                            </mat-form-field>
+
+                            <mat-form-field class="v-input">
+                                <input type="text" matInput placeholder="E-Mail do Professor" ngModel name="email">
+                            </mat-form-field>
+
+                            <button type="submit" mat-raised-button color="primary" [disabled]="form2.invalid" [mat-dialog-close]="true">Registrar Professor e Alugar o(s) Livro(s)</button>
+                        </form>
+                    </mat-card>
+                </mat-tab>
+
+                <mat-tab label="Registrar Servidor">
+                    <mat-card fxFlex="500px">
+                        <form fxLayout="column" fxLayoutAlign="center center" #form3="ngForm" (ngSubmit)="onSubmitStaff(form3)">
+                            
+                            <mat-form-field class="v-input">
+                                <input type="text" matInput placeholder="Nome do Servidor" ngModel name="name" required #unInput="ngModel">
+                                <mat-error *ngIf="unInput.hasError('required')">Você deve colocar o nome do servidor.</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field class="v-input">
+                                <input type="text" matInput placeholder="Função do Servidor" ngModel name="role" required #ui1Input="ngModel">
+                                <mat-error *ngIf="ui1Input.hasError('required')">Você deve colocar a função do servidor.</mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field class="v-input">
+                                <input type="text" matInput placeholder="Telefone do Servidor" ngModel name="phone">
+                            </mat-form-field>
+
+                            <mat-form-field class="v-input">
+                                <input type="text" matInput placeholder="E-Mail do Servidor" ngModel name="email">
+                            </mat-form-field>
+
+                            <button type="submit" mat-raised-button color="primary" [disabled]="form3.invalid" [mat-dialog-close]="true">Registrar Servidor e Alugar o(s) Livro(s)</button>
+                        </form>
+                    </mat-card>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+
+    </mat-step>
+</mat-horizontal-stepper>

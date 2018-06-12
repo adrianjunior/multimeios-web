@@ -1,3 +1,23 @@
-<p>
-  login works!
-</p>
+<section class="signin-form" fxLayoutAlign="center" fxLayoutGap="15px" style="margin-top: 20px;">
+  <mat-card fxFlex="600px">
+    <img id="logo" src="http://via.placeholder.com/250x150" style="margin: 0 auto; display: block">
+
+    <form fxLayout="column" fxLayoutAlign="center center" style="margin-top: 30px" #f="ngForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="v-input">
+        <input type="text" matInput placeholder="Nome de Usuário" ngModel name="username" required #bnInput="ngModel">
+        <mat-error *ngIf="bnInput.hasError('required')">Você deve colocar o nome de usuário.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="v-input">
+        <input type="password" matInput placeholder="Senha" ngModel name="password" required #bnInput="ngModel">
+        <mat-error *ngIf="bnInput.hasError('required')">Você deve colocar a senha.</mat-error>
+      </mat-form-field>
+
+      <p id="forgot-password">Esqueceu sua senha?
+          <button mat-button color="primary">Clique Aqui!</button>
+      </p>
+
+      <button mat-raised-button type="submit" color="primary">Entrar</button>
+    </form>
+  </mat-card>
+</section>
