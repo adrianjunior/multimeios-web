@@ -1,6 +1,9 @@
 import { Component, OnInit, Input  } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
+import { MatSnackBar, MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+
+import { LogoutConfirmationComponent } from './logout-confirmation/logout-confirmation.component';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +14,9 @@ export class HeaderComponent implements OnInit {
 
   pageName: string;
 
-  constructor( private location: Location, private router: Router, private route: ActivatedRoute ) { }
+  constructor( private location: Location, private router: Router,
+    private route: ActivatedRoute, private snackBar: MatSnackBar,
+    private dialog: MatDialog ) { }
 
   ngOnInit() {
     
@@ -70,6 +75,25 @@ export class HeaderComponent implements OnInit {
 
   onGoToRegisterRoom() {
     this.router.navigateByUrl('registrar-sala');
+  }
+
+  onLogout() {
+    let dialogRef = this.dialog.open(LogoutConfirmationComponent, {
+      width: '400px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result == true){
+        this.router.navigateByUrl('');
+        this.openSnackBar('Você não está mais logado(a)!', 'OK');
+      }
+    });
+  }
+
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 3000,
+    });
   }
 
 }

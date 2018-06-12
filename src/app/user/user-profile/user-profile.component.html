@@ -23,7 +23,8 @@
         <input type="text" matInput placeholder="Email do Aluno" readonly value="Email do Aluno">
       </mat-form-field>
 
-      <button mat-raised-button color="primary" class="bp-btn">Editar Aluno</button>
+      <button mat-raised-button color="primary" class="bp-btn" [disabled]="1 == 1">Editar Aluno</button>
+      <button mat-raised-button color="primary" class="bp-btn" (click)="goToDevolution()">Ver Livros Alugados</button>
     </form>
 
     <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" *ngIf="type == 'teacher'">
@@ -49,7 +50,8 @@
         <input type="text" matInput placeholder="Email do Professor" readonly value="Email do Professor">
       </mat-form-field>
 
-      <button mat-raised-button color="primary" class="bp-btn">Editar Professor</button>
+      <button mat-raised-button color="primary" class="bp-btn" [disabled]="1 == 1">Editar Professor</button>
+      <button mat-raised-button color="primary" class="bp-btn" (click)="goToDevolution()">Ver Livros Alugados</button>
     </form>
 
     <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" *ngIf="type == 'staff'">
@@ -71,7 +73,8 @@
         <input type="text" matInput placeholder="Email do Servidor" readonly value="Email do Servidor">
       </mat-form-field>
 
-      <button mat-raised-button color="primary" class="bp-btn">Editar Servidor</button>
+      <button mat-raised-button color="primary" class="bp-btn" [disabled]="1 == 1">Editar Servidor</button>
+      <button mat-raised-button color="primary" class="bp-btn" (click)="goToDevolution()">Ver Livros Alugados</button>
     </form>
   </mat-card>
 </section>

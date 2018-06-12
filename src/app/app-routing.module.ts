@@ -30,6 +30,7 @@ import { RoomListComponent } from './room/room-list/room-list.component';
 import { RoomProfileComponent } from './room/room-profile/room-profile.component';
 import { RoomRegisterComponent } from './room/room-register/room-register.component';
 import { LogsListComponent } from './logs/logs-list/logs-list.component';
+import { UserDevolutionComponent } from './user/user-devolution/user-devolution.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent}, 
@@ -42,7 +43,8 @@ const routes: Routes = [
   { path: 'lista-usuarios', component: UserListComponent}, 
   { path: 'perfil-usuario/:type/:id', component: UserProfileComponent}, 
   { path: 'registrar-usuario', component: UserRegisterComponent}, 
-  { path: 'reservas-usuario/:type/:id', component: UserReservationsComponent}, 
+  { path: 'reservas-usuario/:type/:id', component: UserReservationsComponent},
+  { path: 'devolver-livro', component: UserDevolutionComponent},
   { path: 'editar-funcionario/:id', component: EmployeeEditComponent}, 
   { path: 'lista-funcionarios', component: EmployeeListComponent}, 
   { path: 'perfil-funcionario/:id', component: EmployeeProfileComponent}, 
@@ -60,6 +62,7 @@ const routes: Routes = [
   { path: 'perfil-sala/:id', component: RoomProfileComponent}, 
   { path: 'registrar-sala', component: RoomRegisterComponent},
   { path: 'logs', component: LogsListComponent},
+
 ]
 
 @NgModule({

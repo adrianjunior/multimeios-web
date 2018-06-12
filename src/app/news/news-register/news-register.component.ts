@@ -1,15 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-news-register',
   templateUrl: './news-register.component.html',
   styleUrls: ['./news-register.component.css']
 })
-export class NewsRegisterComponent implements OnInit {
+export class NewsRegisterComponent  {
 
-  constructor() { }
+  constructor(private snackBar: MatSnackBar) { }
 
-  ngOnInit() {
+  onSubmit() {
+    this.openSnackBar('Notícia postada com sucesso!', 'OK');
+  }
+
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 3000,
+    });
   }
 
 }

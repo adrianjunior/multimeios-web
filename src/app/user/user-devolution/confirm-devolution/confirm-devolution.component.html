@@ -1,0 +1,11 @@
+<h2>Devolver Livro(s)</h2>
+<mat-list>
+  <mat-list-item *ngFor="let book of books">
+      <h4 mat-line>{{book.title}}</h4>
+      <p mat-line>{{book.author}}</p>
+  </mat-list-item>
+</mat-list>
+<mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="false">Voltar</button>
+  <button mat-button color="primary" [mat-dialog-close]="true">Confirmar</button>
+</mat-dialog-actions>

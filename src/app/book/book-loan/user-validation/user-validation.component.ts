@@ -21,10 +21,6 @@ export class UserValidationComponent {
     public dialogRef: MatDialogRef<UserValidationComponent>,
     @Inject(MAT_DIALOG_DATA) public books: Book[]) { }
 
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-
   changeForm() {
     if (this.formType === 1) {
       this.formType = 2;

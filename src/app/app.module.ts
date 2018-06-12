@@ -38,6 +38,9 @@ import { LogsListComponent } from './logs/logs-list/logs-list.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { BookLoanComponent } from './book/book-loan/book-loan.component';
 import { UserValidationComponent } from './book/book-loan/user-validation/user-validation.component';
+import { UserDevolutionComponent } from './user/user-devolution/user-devolution.component';
+import { ConfirmDevolutionComponent } from './user/user-devolution/confirm-devolution/confirm-devolution.component';
+import { LogoutConfirmationComponent } from './navigation/header/logout-confirmation/logout-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +75,9 @@ import { UserValidationComponent } from './book/book-loan/user-validation/user-v
     HeaderComponent,
     BookLoanComponent,
     UserValidationComponent,
+    UserDevolutionComponent,
+    ConfirmDevolutionComponent,
+    LogoutConfirmationComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,6 +90,10 @@ import { UserValidationComponent } from './book/book-loan/user-validation/user-v
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [UserValidationComponent]
+  entryComponents: [
+    UserValidationComponent,
+    ConfirmDevolutionComponent,
+    LogoutConfirmationComponent
+  ]
 })
 export class AppModule { }

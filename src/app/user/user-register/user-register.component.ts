@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MatSnackBar } from '@angular/material';
 
 import { Student } from '../student.model';
 import { Teacher } from '../teacher.model';
@@ -21,7 +22,7 @@ export class UserRegisterComponent implements OnInit {
     {value: 'Temporario', viewValue: 'Temporário'}
   ];
 
-  constructor() { }
+  constructor(private snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
@@ -35,6 +36,7 @@ export class UserRegisterComponent implements OnInit {
       phone: form.value.phone,
       email: form.value.email
     };
+    this.openSnackBar('Usuário registrado com sucesso!', 'OK');
     console.log(this.student);
   }
 
@@ -47,6 +49,7 @@ export class UserRegisterComponent implements OnInit {
       phone: form.value.phone,
       email: form.value.email
     };
+    this.openSnackBar('Usuário registrado com sucesso!', 'OK');
     console.log(this.teacher);
   }
 
@@ -58,7 +61,14 @@ export class UserRegisterComponent implements OnInit {
       phone: form.value.phone,
       email: form.value.email
     };
+    this.openSnackBar('Usuário registrado com sucesso!', 'OK');
     console.log(this.staff);
+  }
+
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 3000,
+    });
   }
 
 }
