@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
+import { Location } from '@angular/common';
 
 import { Student } from '../student.model';
 import { Teacher } from '../teacher.model';
@@ -22,7 +23,7 @@ export class UserRegisterComponent implements OnInit {
     {value: 'Temporario', viewValue: 'Temporário'}
   ];
 
-  constructor(private snackBar: MatSnackBar) { }
+  constructor(private snackBar: MatSnackBar, private location: Location) { }
 
   ngOnInit() {
   }
@@ -71,4 +72,7 @@ export class UserRegisterComponent implements OnInit {
     });
   }
 
+  onCancel() {
+    this.location.back();
+  }
 }

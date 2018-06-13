@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-user-profile',
@@ -10,7 +11,7 @@ export class UserProfileComponent implements OnInit {
 
   type: string;
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router, private location: Location) { }
 
   ngOnInit() {
     this.type = this.route.snapshot.paramMap.get('type');
@@ -18,6 +19,10 @@ export class UserProfileComponent implements OnInit {
 
   goToDevolution() {
     this.router.navigateByUrl('devolver-livro');
+  }
+
+  onCancel() {
+    this.location.back();
   }
 
 }

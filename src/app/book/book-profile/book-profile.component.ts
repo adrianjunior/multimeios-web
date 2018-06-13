@@ -20,4 +20,8 @@ export class BookProfileComponent implements OnInit {
   ngOnInit() {
   }
 
+  onCancel() {
+    this.location.back();
+  }
+
 }
