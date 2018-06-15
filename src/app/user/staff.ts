@@ -1,51 +1,51 @@
 export default [
     {
         id: 'staff1',
-        name: 'Servidor 1',
-        role: 'Função 1',
+        name: 'Tatiana Santos',
+        role: 'Zeladoria',
         phone: '(11) 1111-1111',
-        email: 'servidor1@email.com' 
+        email: 'ttsantos@gmail.com' 
     },
     {
         id: 'staff2',
-        name: 'Servidor 2',
-        role: 'Função 2',
+        name: 'Roger Castillo',
+        role: 'Secretaria',
         phone: '(22) 2222-2222',
-        email: 'servidor2@email.com' 
+        email: 'castillo@outlook.com' 
     },
     {
         id: 'staff3',
-        name: 'Servidor 3',
-        role: 'Função 3',
+        name: 'Renan Souza',
+        role: 'Secretaria',
         phone: '(33) 3333-3333',
-        email: 'servidor3@email.com' 
+        email: 'souzinha@bol.com' 
     },
     {
         id: 'staff4',
-        name: 'Servidor 4',
-        role: 'Função 4',
+        name: 'Lucas Fernandes',
+        role: 'Segurança',
         phone: '(44) 4444-4444',
-        email: 'servidor4@email.com' 
+        email: 'fernandes@hotmail.com' 
     },
     {
         id: 'staff5',
-        name: 'Servidor 5',
-        role: 'Função 5',
+        name: 'Abelardo Torres',
+        role: 'Zeladoria',
         phone: '(55) 5555-5555',
-        email: 'servidor5@email.com' 
+        email: 'abelardotorres@gmail.com' 
     },
     {
         id: 'staff6',
-        name: 'Servidor 6',
-        role: 'Função 6',
+        name: 'Túlio Chaves',
+        role: 'Secretaria',
         phone: '(66) 6666-6666',
-        email: 'servidor6@email.com' 
+        email: 'chaves@gmail.com' 
     },
     {
         id: 'staff7',
-        name: 'Servidor 7',
-        role: 'Função 7',
+        name: 'Roberto Chagas',
+        role: 'Secretaria',
         phone: '(77) 7777-7777',
-        email: 'servidor7@email.com' 
+        email: 'robert@hotmail.com' 
     }
 ]
