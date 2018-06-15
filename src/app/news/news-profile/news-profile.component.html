@@ -5,11 +5,11 @@
       <mat-card-title>Informações da Notícia</mat-card-title>
 
       <mat-form-field class="v-input">
-        <input type="text" matInput placeholder="Título da Notícia" readonly value="Título da Notícia">
+        <input type="text" matInput placeholder="Título da Notícia" readonly value="{{news.title}}">
       </mat-form-field>
 
       <mat-form-field class="v-input">
-        <input type="text" matInput placeholder="Data e Hora" readonly value="DD/MM/AAAA - HH:MM">
+        <input type="text" matInput placeholder="Data e Hora" readonly value="{{news.date}} às {{news.time}}">
       </mat-form-field>
 
       <mat-form-field class="v-input">

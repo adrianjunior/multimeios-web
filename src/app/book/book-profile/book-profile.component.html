@@ -6,37 +6,37 @@
       <mat-card-title>Informações do Livro</mat-card-title>
 
       <mat-form-field class="v-input">
-        <input type="text" matInput placeholder="Título do Livro" readonly value="Título do Livro">
+        <input type="text" matInput placeholder="Título do Livro" readonly value="{{book.title}}">
       </mat-form-field>
 
       <mat-form-field class="v-input">
-        <input type="text" matInput placeholder="Autor do Livro" readonly value="Autor do Livro">
+        <input type="text" matInput placeholder="Autor do Livro" readonly value="{{book.author}}">
       </mat-form-field>
 
       <mat-form-field class="v-input">
-        <input type="text" matInput placeholder="Editora do Livro" readonly value="Editora do Livro">
+        <input type="text" matInput placeholder="Editora do Livro" readonly value="{{book.editor}}">
       </mat-form-field>
 
       <mat-form-field class="v-input">
-        <input type="text" matInput placeholder="Gêneros" readonly value="Gênero do Livro">
+        <input type="text" matInput placeholder="Gêneros" readonly value="{{book.gender}}">
       </mat-form-field>
 
       <div style="width: 400px;" fxLayout fxLayoutGap="20px" fxFlexAlign="center">
 
         <mat-form-field class="h-input">
-          <input type="number" matInput placeholder="Ano da Edição" readonly value="2000">
+          <input type="number" matInput placeholder="Ano da Edição" readonly value="{{book.year}}">
         </mat-form-field>
 
         <mat-form-field class="h-input">
-          <input type="text" matInput placeholder="Edição" readonly value="Xª Edição">
+          <input type="text" matInput placeholder="Edição" readonly value="{{book.edition}}">
         </mat-form-field>
 
         <mat-form-field class="h-input">
-          <input type="number" matInput placeholder="Nº de Exemplares" readonly value="5">
+          <input type="number" matInput placeholder="Nº de Exemplares" readonly value="{{book.quantity}}">
         </mat-form-field>
 
         <mat-form-field class="h-input">
-          <input type="number" matInput placeholder="Disponíveis" readonly value="5">
+          <input type="number" matInput placeholder="Disponíveis" readonly value="{{book.available}}">
         </mat-form-field>
       </div>
 
