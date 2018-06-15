@@ -20,13 +20,11 @@ export class UserDevolutionComponent implements OnInit, AfterViewInit {
 
   books = [
     {id: 'book1',
-    title: 'Livro 1',
-    author: 'Autor 1',
-    editor: 'Editora 1',
-    gender: 'Gênero 1',
-    edition: 'Edição 1',
-    year: 2001,
-    quantity: 1,
+    title: 'Dom Casmurro',
+    author: 'Machado de Assis',
+    editor: 'Martin Claret',
+    gender: 'Romance Nacional',
+    quantity: 2,
     available: 1}
   ];
   

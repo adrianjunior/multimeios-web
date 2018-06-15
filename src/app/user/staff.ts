@@ -47,26 +47,5 @@ export default [
         role: 'Função 7',
         phone: '(77) 7777-7777',
         email: 'servidor7@email.com' 
-    },
-    {
-        id: 'staff8',
-        name: 'Servidor 8',
-        role: 'Função 8',
-        phone: '(88) 8888-8888',
-        email: 'servidor8@email.com' 
-    },
-    {
-        id: 'staff9',
-        name: 'Servidor 9',
-        role: 'Função 9',
-        phone: '(99) 9999-9999',
-        email: 'servidor9@email.com' 
-    },
-    {
-        id: 'staff10',
-        name: 'Servidor 10',
-        role: 'Função 10',
-        phone: '(00) 0000-0000',
-        email: 'servidor10@email.com' 
-    },
+    }
 ]

@@ -63,20 +63,4 @@ export default [
         phone: '(88) 8888-8888',
         email: 'professor8@email.com' 
     },
-    {
-        id: 'teacher9',
-        name: 'Professor 9',
-        role: 'Matéria 9',
-        effective: true,
-        phone: '(99) 9999-9999',
-        email: 'professor9@email.com' 
-    },
-    {
-        id: 'teacher10',
-        name: 'Professor 10',
-        role: 'Matéria 10',
-        effective: false,
-        phone: '(00) 0000-0000',
-        email: 'professor10@email.com' 
-    },
 ]
